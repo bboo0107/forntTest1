@@ -1,0 +1,1189 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>01_start.html</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+        /*사이드 메뉴바*/    
+        .sidebar{
+                position: fixed;
+                width: 250px;
+                height: 100%;
+                display: none;
+                background-color: lightgrey;
+                z-index: 10;
+            }
+
+            .sidebar>.closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 50px;
+                margin-left: 50px;
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+            }
+
+            .sideBig{
+                width: 100px;
+                height: 27px;
+                margin-bottom: 20px;
+                text-decoration: none;
+                font-size: 20px;
+                color: rgb(116, 116, 116);
+                margin-left: 20px;
+                cursor: pointer;
+            }
+
+            .sideBig:first-child{
+                margin-top: 70px;
+                cursor: pointer;
+            }
+
+            .sidebar>sideBig,.li {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 15px;
+                color: rgb(116, 116, 116);
+                display: block;
+                cursor: pointer;
+                width: 120px;
+                height: 20px;
+                margin: 0 auto;
+                }
+
+            .newm,.themp,.genp,.evnp,.keepp{
+                display: none;
+                cursor: pointer;
+            }
+            
+            .sideMenu {
+                display: inline-block;
+                cursor: pointer;               
+                }
+
+                .bar1, .bar2, .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: #333;
+                margin: 6px 0;    
+                cursor: pointer;            
+                }
+
+        /*헤더*/
+            
+            #header{
+                width: 1600px;
+                height: 150px;
+                margin:10 auto
+            }
+
+            #header>#logo_sh>#search{
+                float: left;
+                border-radius: 25px;
+                border: 2px solid #333;
+                padding: 20px; 
+                width: 400px;
+                height: 15px;
+                margin-top:35px;
+                margin-left: 10px;
+                background-image: url(./search.png);  
+            }
+
+            #header>#logo_sh>#search:focus::placeholder{
+                color: transparent;
+            }
+
+            #header>#logo_sh{
+                width: 1600px;
+                height: 100px;
+            }
+
+            #header>#logo_sh>.loginjoin{
+                float: right;
+                width: 170px;
+                height: 25px;
+            }
+
+            #header>.loginjoin>a{
+                font-size:15px;
+            }
+
+            #header>div.bar{
+                height: 30px;
+                width:1200px;
+            }
+
+            #header>div.bar li:hover{
+                text-decoration: underline;
+            }
+
+            #header>#logo_sh>#top_logo{
+                float: left;
+                display: inline-block;
+                width: 142px;
+                height: 99px;
+                background-image: url(./top_logo.png);
+            }
+
+        /*상단 앨범*/    
+            .m{
+                width: 1600px;
+                height: 700px;
+                top: 200px;
+                margin: 0 auto;
+            }
+
+            #m1{
+                width: 1200px;
+                height: 320px;
+                background-color: #DFE5E8;
+                border-radius: 12px;
+                margin-bottom: 30px;
+            }
+
+            #m1guide{
+                width: 1100px;
+                height: 280px;
+                margin: 0 auto;
+            }
+
+            #m1>#left{
+                float: left;
+                width: 35px;
+                height: 40px;
+                margin-top: 135px;
+                cursor: pointer;
+            }
+
+            #m1>#right{
+                float: right;
+                width: 35px;
+                height: 40px;
+                margin-top: 135px;
+                cursor: pointer;
+            }
+
+           .mm{
+                float: left;
+                width: 205px;
+                height: 280px;
+                z-index: 3;
+                margin-top: 23px;
+                position: relative;
+            }
+
+            .mm:first-child{margin-right: 19px;}
+            .mm:nth-child(2){margin-right: 18px;}
+            .mm:nth-child(3){margin-right: 19px;}
+            .mm:nth-child(4){margin-right: 18px;}
+
+
+            .album_img{
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .m>#m1>#m1guide>.mm>.playbtn{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top:155px;
+                right: 10px;
+                cursor: pointer;
+            }
+
+            .m>#m1>#m1guide>.mm>h4{
+                margin: 13px 20px 0px 10px;
+            }
+
+            .m>#m1>#m1guide>.mm>p{
+                margin: 5px 10px;
+                font-size: 15px;
+            }
+   
+            #more_1{
+                float: right;
+                width: 30px;
+                height: 30px;
+                margin-top: -40px;
+                margin-right: -8px;
+                cursor: pointer;
+            }
+
+            #more_2{
+                float: right;
+                width: 30px;
+                height: 30px;
+                margin-top: -40px;
+                margin-right: -8px;
+                cursor: pointer;
+            }
+
+            #more_3{
+                float: right;
+                width: 30px;
+                height: 30px;
+                margin-top: -40px;
+                margin-right: -8px;
+                cursor: pointer;
+            }
+
+            #more_4{
+                float: right;
+                width: 30px;
+                height: 30px;
+                margin-top: -40px;
+                margin-right: -8px;
+                cursor: pointer;
+            }
+
+            #more_5{
+                float: right;
+                width: 30px;
+                height: 30px;
+                margin-top: -40px;
+                margin-right: -8px;
+                cursor: pointer;
+            }
+
+            .popmenu{
+                position: relative;
+                cursor: pointer;
+            }
+
+            .popmenu p{
+                padding-left: 7px;
+                cursor: pointer;
+            }
+
+            .popmenu2{
+                position: absolute;
+                left: 205px;
+                bottom: -185px;
+                cursor: pointer;
+            }
+
+            .popmenu2 td{
+                padding-left: 10px;
+                cursor: pointer;
+            }
+
+            #m1>#m1guide>.mm>.popmenu>#minimenu_1{
+                float: right;
+                display: none;
+                font-size: 12px; 
+                margin-top: 3px;
+                width: 120px;
+                height: 150px;
+            }
+
+            #m1>#m1guide>.mm>.popmenu>#minimenu_2{
+                float: right;
+                display: none;
+                font-size: 12px; 
+                margin-top: 3px;
+                width: 120px;
+                height: 150px;
+            }
+
+            #m1>#m1guide>.mm>.popmenu>#minimenu_3{
+                float: right;
+                display: none;
+                font-size: 12px; 
+                margin-top: 3px;
+                width: 120px;
+                height: 150px;
+            }
+
+            #m1>#m1guide>.mm>.popmenu>#minimenu_4{
+                float: right;
+                display: none;
+                font-size: 12px; 
+                margin-top: 3px;
+                width: 120px;
+                height: 150px;
+            }
+
+            #m1>#m1guide>.mm>.popmenu>#minimenu_5{
+                float: right;
+                display: none;
+                font-size: 12px; 
+                margin-top: 3px;
+                width: 120px;
+                height: 150px;
+            }
+
+
+            #m1>#m1guide>.mm>.popmenu2>#minimenu2_1{
+                float: right;
+                display: none;
+                width: 90px;
+                height: 100px;
+                font-size: 12px;
+                background-color: white;
+            }    
+
+            #m1>#m1guide>.mm>.popmenu2>#minimenu2_2{
+                float: right;
+                display: none;
+                width: 90px;
+                height: 100px;
+                font-size: 12px;
+                background-color: white;
+            } 
+
+            #m1>#m1guide>.mm>.popmenu2>#minimenu2_3{
+                float: right;
+                display: none;
+                width: 90px;
+                height: 100px;
+                font-size: 12px;
+                background-color: white;
+            } 
+
+            #m1>#m1guide>.mm>.popmenu2>#minimenu2_4{
+                float: right;
+                display: none;
+                width: 90px;
+                height: 100px;
+                font-size: 12px;
+                background-color: white;
+            } 
+
+            #m1>#m1guide>.mm>.popmenu2>#minimenu2_5{
+                float: right;
+                display: none;
+                width: 90px;
+                height: 100px;
+                font-size: 12px;
+                background-color: white;
+            } 
+
+        /*광고*/
+            #ad2,#ad3{
+                display: none;
+            }
+
+            #adBox{
+                float: right;
+                width: 380px;
+                height: 700px;
+            }
+
+            #adBox>img{
+                border-radius: 12px;
+            }
+
+        /*하단 뮤비*/        
+            #m2{
+                float: left;
+                width: 1200px;
+                height: 350px;
+                background-color: #DFE5E8;
+                border-radius: 12px; 
+                /* margin-top: 50px; */
+            }
+
+            #m2guide{
+                width: 1100px;
+                height: 320px;
+                padding: 0 auto;
+                margin:0 auto;
+                margin-top: 20px;
+            }
+
+            .mv{
+                float: left;
+                width: 340px;
+                height: 280px;
+                padding: 0 auto;
+                margin-right: 39px;
+                margin-top: 20px;               
+            }
+
+            .mv:last-child{
+                margin-right: 0;
+            }
+
+            .m>#m2>#m2guide>.mv>h4{
+                margin: 13px 20px 0px 10px;
+            }
+            .m>#m2>#m2guide>.mv>p{
+                margin: 5px 10px;
+                font-size: 15px;
+            }
+            
+            .top{
+                width: 370px;
+                height: 600px;
+                background-color: yellow;
+            }
+        
+            #menu1,#menu2,#menu3 {
+                width: 35px;
+                height: 5px;
+                background-color: black;
+                margin: 6px 0;
+                top: 170px;                
+            }
+           
+            .menu{
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+            }
+
+            a li{
+            float: left;
+            font-weight: 600;
+            width: 85px;
+            height: 30px;
+            margin-right: 80px;
+            }
+
+            ul{
+                list-style-type: none;
+                min-width: 1100px;
+            }
+
+
+            a:link{
+                text-decoration: none;
+                color:black;
+                font-size: 20px;
+            }
+            /*테마별 음악*/
+            #themMusic{
+                width: 1600px;
+                height: 300px;
+                margin: 30 auto;
+                border-top: 1px solid #999;
+            }
+
+            .Themecover{
+                text-align: center;
+                position: absolute;
+                width: 300px;
+                height: 280px;
+                top: 0;
+                background-color: black;
+                opacity: 0.6;
+                display: none;
+            }
+
+            .Themecover p{
+                margin: 50px auto;
+                font-size: 20px;
+                color: white;
+            }
+
+            .ThemeMusic{
+                float: left;
+                width: 300px;
+                height: 280px;
+                outline: 1px solid rgb(190, 190, 190);
+                margin-right: 25px;
+                margin-top: 30px;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .ThemeMusic:last-child{
+                margin-right: 0;
+            }
+
+            .Themeimg{
+                width: 300px;
+                height: 220px;
+                margin: 0 auto;
+            }
+
+            .ThemeMusic>p{
+                text-align: center;
+            }
+
+            
+/*하단시작*/
+#footerBox{ 
+    margin-top: 80px;
+   width: 100%; height: 290px;
+   background-color:#8fcca1;
+}
+
+#footerBox>#infoBox{
+   position: relative; /*부모*/
+   width: 1600px; height: 300px;
+   margin:0 auto;
+   /*outline: 1px solid blue;*/
+}
+
+#footerBox>#infoBox a #footerLogo{
+    position: absolute;
+    width: 142px; height: 35px;
+    top:30px; left:50%;
+    transform:translate(-50%);
+    background: url(./footer_logo.png)no-repeat;
+    opacity: 0.5;
+    /*outline: 1px solid red;*/
+}
+#footerBox>#infoBox a #footerLogo:hover{opacity: 0.7;}
+
+#footerBox>#infoBox #snsBox{
+    position: absolute;
+    width: 200px; height: 35px;
+    top:100px; left:50%;
+    transform:translate(-100px, -50%);
+    /*outline: 1px solid green;*/
+}
+
+#footerBox>#infoBox #snsBox img{
+    cursor: pointer;
+    opacity: 0.5;
+    margin-right: 14px;
+}
+
+#footerBox>#infoBox #snsBox img:last-child{
+    margin-right: 0;
+}
+
+#footerBox>#infoBox #snsBox img:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#footerBox>#infoBox>nav{
+    position: absolute;
+    width: 50%; height: auto;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+}
+
+#footerBox>#infoBox>nav>#info_menu{
+    width: 100%;
+}
+
+#footerBox>#infoBox>nav>#info_menu>li{
+    float: left;
+}
+
+#footerBox>#infoBox>nav>#info_menu>li>a::after{
+    display: inline-block;
+    content: "｜";
+    clear: both;
+    margin:0 10px;
+}
+
+
+#footerBox>#infoBox>nav>#info_menu>li:last-child>a::after{
+    display: inline-block;
+    content: "";
+    clear: both;
+}
+
+#footerBox>#infoBox>nav>#info_menu>li>a{
+    text-decoration: none;
+    color: #555;
+    font: 18.5px 'NanumGothic';
+}
+
+#footerBox>#infoBox>nav>#info_menu>li>a:hover{
+    opacity: 0.7;
+}
+
+
+#infoBox address{
+   position: absolute;
+   color: #555;
+   font: 0.9rem/180% 'NanumGothic';
+   width: 50%; height: 50px;
+    top:70%; left:50%;
+    transform:translate(-50%, -50%); /*position으로 가운데정렬하는코드*/
+    bottom:20px;
+    text-align: center;
+}
+
+#infoBox #family{
+   position: absolute;
+   width: 250px; height: 35px;
+   padding-left:8px; padding-bottom: 3px;
+   bottom: 50px; right:20px;
+    background-color:white;
+   border-color: #666; color: #ccc;
+}
+
+        </style>
+    </head>
+    <body>      
+        <div class="sideMenu" onclick="opennavi(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div id="mySidenav" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div>    
+            <div class="sideBig">인기차트</div>          
+                <div id="newmusic" class="sideBig">최신음악</div>
+                    <div class="newm">                   
+                            <li class="li">전체</li>                   
+                            <li class="li">국내</li>                    
+                            <li class="li">해외</li>       
+                    </div>
+               
+                <div id="them" class="sideBig">테마별</div></a>
+                    <div class="themp">                    
+                            <li class="li">인기테마</li>                  
+                            <li class="li">추천테마</li>                    
+                            <li class="li">연도별</li>       
+                    </div> 
+              
+                <div id="gen" class="sideBig">장르별</div>
+                    <div class="genp">                   
+                            <li class="li">발라드</li>                  
+                            <li class="li">댄스/팝</li>                    
+                            <li class="li">아이돌</li>                      
+                            <li class="li">랩/힙합</li>                    
+                            <li class="li">인디</li>                     
+                            <li class="li">재즈</li>
+                            <li class="li">락/메탈</li>
+                            <li class="li">EDM</li>
+                            <li class="li">뉴에이지T</li>
+                            <li class="li">J-POP</li>
+                            <li class="li">클래식</li>
+                            <li class="li">어린이</li>              
+                    </div>
+             
+                <div id="evn" class="sideBig">이벤트</div>
+                    <div class="evnp">                   
+                            <li class="li">진행중인 이벤트</li>                   
+                            <li class="li">지나간 이벤트</li>                  
+                            <li class="li">당첨확인</li>     
+                    </div>        
+               
+                <div id="keep" class="sideBig">보관함</div>
+                    <div class="keepp">
+                            <li class="li">나의 플레이리스트</li>                    
+                            <li class="li">최근 들은 곡</li>                    
+                            <li class="li">가장 많이 들은 곡</li>                    
+                            <li class="li">구매한 음악</li>                   
+                            <li class="li">좋아요한 음악</li>              
+                    </div>
+        </div>
+    </div>
+          
+    <div id="header">
+        <div id="logo_sh">
+            <div id="top_logo"></div>
+             <input type="text" id="search" value="" placeholder="검색어를 입력하세요."/>
+             <div class="loginjoin"><a href="#">로그인 / 회원가입</a></div>
+        </div>
+        <div class="bar">
+            <ul>
+                <a href="#" target="#">
+                    <li>인기차트</li></a>
+                <a href="#" target="#">  
+                    <li>장르별</li></a> 
+                <a href="#" target="#">   
+                    <li>테마별</li></a> 
+                <a href="#" target="#">    
+                    <li>보관함</li></a>
+            </ul>
+        </div>
+          
+    </div>
+<div class="m">
+    
+    <div id="adBox">
+        <img src="./ad1.png" class="ad" alt="#">
+        <img src="./ad2.png" class="ad" alt="#">
+        <img src="./ad3.png" class="ad" alt="#">
+    </div>
+    <div id = m1>
+        <img src="./next (1).png" alt="" id="right">
+            <img src="./next_l.png" alt="" id="left">
+        <div id = m1guide>             
+        <div class="mm">
+            <a href="https://music.bugs.co.kr/album/20335890?wl_ref=M_contents_03_02">
+                <img src="./1.jpg" class="album_img" id="album_1"/></a>
+                <img src="./play.png" class="playbtn" id="play1"/>
+                <h4 id="albumSub1">OHIO</h4>
+                <p id="albumSinger1">CRUSH</p>
+                <div class=mminfo>
+                    <div class="more"><img id="more_1" src="./more.png" alt=""></div>
+                </div>  
+                <div class="popmenu">
+                    <table id="minimenu_1" style="background-color: white; z-index: 999;">
+                        <tr>
+                            <td><p>재생목록에 담기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>앨범보기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>다운로드</p></td>
+                        </tr>
+                        <tr id="share1">
+                            <td><p>공유하기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>좋아요</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="popmenu2">
+                    <table id="minimenu2_1">
+                        <tr>
+                            <td>Twiter</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                        </tr>
+                        <tr>
+                            <td> kakaotalk</td>
+                        </tr>
+                    </table>
+                </div>   
+        </div>
+        <div class="mm">
+            <a href="https://music.bugs.co.kr/album/20335890?wl_ref=M_contents_03_02">
+                <img src="./2.jpg" class="album_img" id="album_2"/></a>
+                <img src="./play.png" class="playbtn" id="play2"/>
+                <h4 id="albumSub2">MONSTER</h4>
+                <p id="albumSinger2">레드벨벳-아이린&슬기</p>
+                <div class=mminfo>
+                    <div class="more"><img id="more_2" src="./more.png" alt=""></div>
+                </div> 
+                <div class="popmenu">
+                    <table id="minimenu_2" style="background-color: white; z-index: 999;">
+                        <tr>
+                            <td><p>재생목록에 담기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>앨범보기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>다운로드</p></td>
+                        </tr>
+                        <tr id="share2">
+                            <td><p>공유하기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>좋아요</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="popmenu2">
+                    <table id="minimenu2_2">
+                        <tr>
+                            <td>Twiter</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                        </tr>
+                        <tr>
+                            <td>kakaotalk</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+        <div class="mm">
+            <a href="https://music.bugs.co.kr/album/20335890?wl_ref=M_contents_03_02">
+                <img src="./블핑.jpg" class="album_img" id="album_3"/></a>
+                <img src="./play.png" class="playbtn" id="play3"/>
+                <h4 id="albumSub3">How you like that</h4>
+                <p id="albumSinger3">BlackPink</p>
+                <div class=mminfo>
+                    <div class="more"><img id="more_3" src="./more.png" alt=""></div>
+                </div> 
+                <div class="popmenu">
+                    <table id="minimenu_3" style="background-color: white; z-index: 999;">
+                        <tr>
+                            <td><p>재생목록에 담기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>앨범보기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>다운로드</p></td>
+                        </tr>
+                        <tr id="share3">
+                            <td><p>공유하기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>좋아요</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="popmenu2">
+                    <table id="minimenu2_3">
+                        <tr>
+                            <td>Twiter</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                        </tr>
+                        <tr>
+                            <td>kakaotalk</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+        <div class="mm">
+            <a href="https://music.bugs.co.kr/album/20335890?wl_ref=M_contents_03_02">
+                <img src="./4.jpg" class="album_img" id="album_4"/></a>
+                <img src="./play.png" class="playbtn" id="play4"/>
+                <h4 id="albumSub">Smile</h4>
+                <p id="albumSinger4">Katy Perry</p>
+                <div class=mminfo>
+                    <div class="more"><img id="more_4" src="./more.png" alt=""></div>
+                </div> 
+                <div class="popmenu">
+                    <table id="minimenu_4" style="background-color: white; z-index: 999;">
+                        <tr>
+                            <td><p>재생목록에 담기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>앨범보기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>다운로드</p></td>
+                        </tr>
+                        <tr id="share4">
+                            <td><p>공유하기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>좋아요</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="popmenu2">
+                    <table id="minimenu2_4">
+                        <tr>
+                            <td>Twiter</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                        </tr>
+                        <tr>
+                            <td>kakaotalk</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+        <div class="mm">
+            <a href="https://music.bugs.co.kr/album/20335890?wl_ref=M_contents_03_02">
+                <img src="./5.jpg" class="album_img" id="album_5" alt="" /></a>
+                <img src="./play.png" class="playbtn" id="play5"/>
+                <h4 id="albumSub5">Legends Never Die</h4>
+                <p id="albumSinger5">Juice WRLD</p>
+                <div class=mminfo>
+                    <div class="more"><img id="more_5" src="./more.png"></div>
+                </div> 
+                <div class="popmenu">
+                    <table id="minimenu_5" style="background-color: white; z-index: 999;">
+                        <tr>
+                            <td><p>재생목록에 담기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>앨범보기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>다운로드</p></td>
+                        </tr>
+                        <tr id="share5">
+                            <td><p>공유하기</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>좋아요</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="popmenu2">
+                    <table id="minimenu2_5">
+                        <tr>
+                            <td>Twiter</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                        </tr>
+                        <tr>
+                            <td>kakaotalk</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+
+        </div>
+        
+    </div>
+
+
+    <div id = m2>
+        <div id="m2guide">
+            <div class="mv"><iframe width="340" height="220" src="https://www.youtube.com/embed/T47pCmrcK9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>여름향기가 날 춤추게 해</h4>
+                <p>SF9(에스에프나인)</p>
+            </div>
+            <div class="mv"><iframe width="340" height="220" src="https://www.youtube.com/embed/jPFrHYXYxak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>PLAY(Feat.창모)</h4>
+                <p>청하</p>
+            </div>
+            <div class="mv"><iframe width="340" height="220" src="https://www.youtube.com/embed/HdZdxocqzq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>LEFT & RIGHT</h4>
+                <p>SEVENTEEN</p>
+            </div>
+        </div>    
+    </div>
+    </div>
+</div>
+
+<!--테마-->
+<div id="themMusic">
+    <div class="ThemeMusic" id="Theme1">
+        <img src="./Ocean.jpg" class="Themeimg" id="Themeimg1"/>
+        <p id="ThemeSub1">#여름 #바다 #휴가</p>
+            <div class="Themecover" id="Themecover1">
+                <p>10곡</p>
+                <p>설명 어쩌구저쩌구</p>
+            </div>
+    </div>
+    <div class="ThemeMusic" id="Theme2">
+        <img src="./coding.PNG" class="Themeimg" id="Themeimg2"/>
+        <p id="ThemeSub2">#코딩 #과제할때 듣는 음악</p>
+            <div class="Themecover" id="Themecover2">
+                <p>20곡</p>
+                <p>설명 어쩌구저쩌구</p>
+            </div>
+    </div>
+    <div class="ThemeMusic" id="Theme3">
+        <img src="./제니.png" class="Themeimg" id="Themeimg3"/>
+        <p id="ThemeSub3">#광고 #CF #TV속 그 음악</p>
+        <div class="Themecover" id="Themecover3">
+            <p>14곡</p>
+            <p>설명 어쩌구저쩌구</p>
+        </div>
+    </div>
+    <div class="ThemeMusic" id="Theme4">
+        <img src="./비오는날.PNG" class="Themeimg" id="Themeimg4"/>
+        <p id="ThemeSub4">#비오는 날 #센치 #새벽</p>
+        <div class="Themecover" id="Themecover4">
+            <p>9곡</p>
+            <p>설명 어쩌구저쩌구</p>
+        </div>
+    </div>
+    <div class="ThemeMusic" id="Theme5">
+        <img src="./출근.jpg" class="Themeimg" id="Themeimg5"/>
+        <p id="ThemeSub5">#출근 #신나는 음악 #텐션업</p>
+        <div class="Themecover" id="Themecover5">
+            <p>25곡</p>
+            <p>설명 어쩌구저쩌구</p>
+        </div>
+    </div>
+</div>
+
+<footer id="footerBox"> <!--#########width:100% footer시작-->
+    <section id="infoBox"> <!--@@width:1100px infoBox시작 -->
+ 
+         <a href="#"><div id="footerLogo"></div></a>
+ 
+         <div id="snsBox">
+             <img src="./footer_sns01.png" alt="#">
+             <img src="./footer_sns02.png" alt="#">
+             <img src="./footer_sns03.png" alt="#">
+             <img src="./footer_sns04.png" alt="#">
+         </div>
+ 
+         <nav>
+             <ul id="info_menu">
+                 <li><a href="#">이용약관</a></li>
+                 <li><a href="#">개인정보처리방침</a></li>
+                 <li><a href="#">이메일</a></li>
+                 <li><a href="#">무단수집거부</a></li>
+                 <li><a href="#">법적고지</a></li>
+                 <li><a href="#">사이트맵</a></li>
+             </ul>
+         </nav>
+ 
+       <address>
+          서울시 중구 마른내로34 15층 마이스페이스 대표 박정음 이메일 mastereum@myspace.net FAX.02-6740-4949<br>고객상담센터 1577-4410 COPYRIGHT ⓒ 2020 My Space Music. ALL RIGHT RESERVED.
+       </address>
+ 
+       <select onchange="window.open(this.value);" id="family">
+          <option value="">패밀리사이트바로가기</option>
+          <option value="https://www.kakao-m.com/">카카오M</option>
+          <option value="https://www.kakaocorp.com/">카카오corp</option>
+          <option value="https://www.daum.net/">다음</option>
+       </select>
+ 
+    </section>
+ </footer>
+
+    </body>
+    <script>
+        
+        function opennavi() {
+        document.getElementById("mySidenav").style.display = "block";
+        }
+
+        function closeNav() {
+        document.getElementById("mySidenav").style.display = "none";
+        }
+
+        $("#newmusic").click(function(){$(".newm").slideToggle("slow");});       
+        $("#them").click(function(){$(".themp").slideToggle("slow");});
+        $("#gen").click(function(){ $(".genp").slideToggle("slow");});
+        $("#evn").click(function(){$(".evnp").slideToggle("slow");});
+        $("#keep").click(function(){$(".keepp").slideToggle("slow");});
+        $(".sideMenu").click(function(){$(".sidebar").css({"display":"block"});});
+
+        $('#more_1').click(function(){$('#minimenu_1').toggle();});
+        $('#more_2').click(function(){$('#minimenu_2').toggle();});
+        $('#more_3').click(function(){$('#minimenu_3').toggle();});
+        $('#more_4').click(function(){$('#minimenu_4').toggle();});
+        $('#more_5').click(function(){$('#minimenu_5').toggle();});
+
+        $('#share1').mouseenter(function(){$('#minimenu2_1').toggle();});
+        $('#share2').mouseenter(function(){$('#minimenu2_2').toggle();});
+        $('#share3').mouseenter(function(){$('#minimenu2_3').toggle();});
+        $('#share4').mouseenter(function(){$('#minimenu2_4').toggle();});
+        $('#share5').mouseenter(function(){$('#minimenu2_5').toggle();});
+
+        $('#minimenu2_1').mouseleave(function(){$('#minimenu2_1').css({"display":"none"});});
+        $('#minimenu2_2').mouseleave(function(){$('#minimenu2_2').css({"display":"none"});});
+        $('#minimenu2_3').mouseleave(function(){$('#minimenu2_3').css({"display":"none"});});
+        $('#minimenu2_4').mouseleave(function(){$('#minimenu2_4').css({"display":"none"});});
+        $('#minimenu2_5').mouseleave(function(){$('#minimenu2_5').css({"display":"none"});});
+
+        var index =0;
+            window.onload = function(){
+                slideShow();
+            }
+            function slideShow(){
+                var i;
+                var x = document.getElementsByClassName("ad")
+                for(i=0; i<x.length;i++){
+                    x[i].style.display="none";
+                }
+                index++;
+                if(index >x.length){
+                    index =1;
+
+                }
+                x[index-1].style.display="block";
+                setTimeout(slideShow,2500);
+            }
+ 
+            $("#play1").hover(function(){ //mousein
+                $('#album_1').css({"border":"2px solid white","opacity":"0.7","box-sizing":"border-box"});
+            },function(){ //mouseout
+                $('#album_1').css({"border":"none","opacity":"100%","box-sizing":"border-box"});
+            });
+            $("#play2").hover(function(){ //mousein
+                $('#album_2').css({"border":"2px solid white","opacity":"0.7","box-sizing":"border-box"});
+            },function(){ //mouseout
+                $('#album_2').css({"border":"none","opacity":"100%","box-sizing":"border-box"});
+            });
+            $("#play3").hover(function(){ //mousein
+                $('#album_3').css({"border":"2px solid white","opacity":"0.7","box-sizing":"border-box"});
+            },function(){ //mouseout
+                $('#album_3').css({"border":"none","opacity":"100%","box-sizing":"border-box"});
+            });
+            $("#play4").hover(function(){ //mousein
+                $('#album_4').css({"border":"2px solid white","opacity":"0.7","box-sizing":"border-box"});
+            },function(){ //mouseout
+                $('#album_4').css({"border":"none","opacity":"100%","box-sizing":"border-box"});
+            });
+            $("#play5").hover(function(){ //mousein
+                $('#album_5').css({"border":"2px solid white","opacity":"0.7","box-sizing":"border-box"});
+            },function(){ //mouseout
+                $('#album_5').css({"border":"none","opacity":"100%","box-sizing":"border-box"});
+            });
+
+            $("#right").on({
+                click:function(){
+                    $('#album_1').attr("src","./13.jpg");                
+                    $('#albumSinger1').html("헤이즈");
+                    $('#albumSub1').html("작사가");
+                    $('#album_2').attr("src","./10.jpg");                
+                    $('#albumSinger2').html("아이유");
+                    $('#albumSub2').html("에잇");
+                    $('#album_3').attr("src","./11.jpg");                
+                    $('#albumSinger3').html("정승환");
+                    $('#albumSub3').html("언제라도 어디에서라도");
+                    $('#album_4').attr("src","./bazzi.jpg");                
+                    $('#albumSinger4').html("Bazzi");
+                    $('#albumSub4').html("I Don't Think I'm Okay");
+                    $('#album_5').attr("src","./7.jpg");                
+                    $('#albumSinger5').html("화사");
+                    $('#albumSub5').html("마리아");
+                }
+            });
+
+            $("#left").on({
+                click:function(){
+                    $('#album_1').attr("src","./1.jpg");                
+                    $('#albumSinger1').html("CRUCH");
+                    $('#albumSub1').html("OHIO");
+                    $('#album_2').attr("src","./2.jpg");                
+                    $('#albumSinger2').html("레드벨벳-아이린&슬기");
+                    $('#albumSub2').html("MONSTER");
+                    $('#album_3').attr("src","./블핑.jpg");                
+                    $('#albumSinger3').html("BlackPink");
+                    $('#albumSub3').html("How you like that");
+                    $('#album_4').attr("src","./4.jpg");                
+                    $('#albumSinger4').html("Katy Perry");
+                    $('#albumSub4').html("Smile");
+                    $('#album_5').attr("src","./5.jpg");                
+                    $('#albumSinger5').html("Juice WRLD");
+                    $('#albumSub5').html("Legends Never Die");
+                }
+            });
+
+            $("#Theme1").hover(function(){ //mousein
+                $('#Themecover1').css({"box-sizing":"border-box","display":"block"});
+            },function(){ //mouseout
+                $('#Themecover1').css({"display":"none"});
+            });
+            $("#Theme2").hover(function(){ //mousein
+                $('#Themecover2').css({"box-sizing":"border-box","display":"block"});
+            },function(){ //mouseout
+                $('#Themecover2').css({"display":"none"});
+            });
+            $("#Theme3").hover(function(){ //mousein
+                $('#Themecover3').css({"box-sizing":"border-box","display":"block"});
+            },function(){ //mouseout
+                $('#Themecover3').css({"display":"none"});
+            });
+            $("#Theme4").hover(function(){ //mousein
+                $('#Themecover4').css({"box-sizing":"border-box","display":"block"});
+            },function(){ //mouseout
+                $('#Themecover4').css({"display":"none"});
+            });
+            $("#Theme5").hover(function(){ //mousein
+                $('#Themecover5').css({"box-sizing":"border-box","display":"block"});
+            },function(){ //mouseout
+                $('#Themecover5').css({"display":"none"});
+            });
+
+            
+ </script>
+</html>
